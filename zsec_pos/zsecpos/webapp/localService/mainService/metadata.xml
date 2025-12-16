@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="SAP__aggregation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="SAP__capabilities"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CODELIST',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="SAP__CodeList"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="SAP__common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CORE',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Core.V1" Alias="SAP__core"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HIERARCHY',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Hierarchy.v1" Alias="SAP__hierarchy"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HTML5',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="SAP__HTML5"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="SAP__measures"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ODM',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.ODM.v1" Alias="SAP__ODM"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PDF',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PDF.v1" Alias="SAP__PDF"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_SESSION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Session.v1" Alias="SAP__session"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_SUPPORT',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Support.v1" Alias="SAP__support"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="SAP__UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="SAP__validation"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="com.sap.gateway.srvd.zsec_ui_pos.v0001" Alias="SAP__self">
+            <Annotation Term="SAP__core.SchemaVersion" String="1.0.0"/>
+            <EntityType Name="PositionDataType">
+                <Key>
+                    <PropertyRef Name="PositionNumber"/>
+                    <PropertyRef Name="Ebr"/>
+                </Key>
+                <Property Name="PositionNumber" Type="Edm.String" Nullable="false" MaxLength="8"/>
+                <Property Name="Ebr" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="PositionDesc" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="CompanyCode" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Property Name="CompanyName" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="SubPernr" Type="Edm.String" Nullable="false" MaxLength="8"/>
+                <Property Name="SubEmployeeName" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="SubOnTaa" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="EmailAddress" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="ManagerName" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="HdaPernr" Type="Edm.String" Nullable="false" MaxLength="8"/>
+                <Property Name="HdaEmployeeName" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="TaaStartDate" Type="Edm.Date"/>
+                <Property Name="TaaEndDate" Type="Edm.Date"/>
+                <Property Name="IsChief" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="CurrOrgUnit" Type="Edm.String" Nullable="false" MaxLength="8"/>
+                <Property Name="CurrOrgUnitName" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="OrgUnitManager" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="OrgLevel01" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="OrgLevel01Des" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="OrgLevel02" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="OrgLevel02Des" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="OrgLevel03" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="OrgLevel03Des" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="OrgLevel04" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="OrgLevel04Des" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="OrgLevel05" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="OrgLevel05Des" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="OrgLevel06" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="OrgLevel06Des" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="OrgLevel07" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="OrgLevel07Des" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="OrgLevel08" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="OrgLevel08Des" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="OrgLevel09" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="OrgLevel09Des" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="CreatedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="LastChangedBy" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="LastChangedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="LocalLastChangedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="__EntityControl" Type="com.sap.gateway.srvd.zsec_ui_pos.v0001.EntityControl"/>
+                <Property Name="SAP__Messages" Type="Collection(com.sap.gateway.srvd.zsec_ui_pos.v0001.SAP__Message)" Nullable="false"/>
+            </EntityType>
+            <ComplexType Name="EntityControl">
+                <Property Name="Deletable" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="Updatable" Type="Edm.Boolean" Nullable="false"/>
+            </ComplexType>
+            <ComplexType Name="SAP__Message">
+                <Property Name="code" Type="Edm.String" Nullable="false"/>
+                <Property Name="message" Type="Edm.String" Nullable="false"/>
+                <Property Name="target" Type="Edm.String"/>
+                <Property Name="additionalTargets" Type="Collection(Edm.String)" Nullable="false"/>
+                <Property Name="transition" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="numericSeverity" Type="Edm.Byte" Nullable="false"/>
+                <Property Name="longtextUrl" Type="Edm.String"/>
+            </ComplexType>
+            <Action Name="deleteAll" IsBound="true">
+                <Parameter Name="_it" Type="Collection(com.sap.gateway.srvd.zsec_ui_pos.v0001.PositionDataType)" Nullable="false"/>
+            </Action>
+            <EntityContainer Name="Container">
+                <EntitySet Name="PositionData" EntityType="com.sap.gateway.srvd.zsec_ui_pos.v0001.PositionDataType"/>
+            </EntityContainer>
+            <Annotations Target="SAP__self.PositionDataType/PositionNumber">
+                <Annotation Term="SAP__common.Label" String="Position Number"/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/Ebr">
+                <Annotation Term="SAP__common.Label" String="EBR"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/PositionDesc">
+                <Annotation Term="SAP__common.Label" String="Position Description"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/CompanyCode">
+                <Annotation Term="SAP__common.Label" String="Company Code"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/CompanyName">
+                <Annotation Term="SAP__common.Label" String="Company Name"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/SubPernr">
+                <Annotation Term="SAP__common.Label" String="Sub - Pernr"/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/SubEmployeeName">
+                <Annotation Term="SAP__common.Label" String="Sub - Employee Name"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/SubOnTaa">
+                <Annotation Term="SAP__common.Label" String="Sub on TAA"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/EmailAddress">
+                <Annotation Term="SAP__common.Label" String="Email Address"/>
+                <Annotation Term="Communication.IsEmailAddress"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/ManagerName">
+                <Annotation Term="SAP__common.Label" String="Manager name (Sub Only)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/HdaPernr">
+                <Annotation Term="SAP__common.Label" String="HDA - Pernr"/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/HdaEmployeeName">
+                <Annotation Term="SAP__common.Label" String="HDA - Employee name"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/TaaStartDate">
+                <Annotation Term="SAP__common.Label" String="TAA - Start Date"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/TaaEndDate">
+                <Annotation Term="SAP__common.Label" String="TAA - End Date"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/IsChief">
+                <Annotation Term="SAP__common.Label" String="Is Chief"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/CurrOrgUnit">
+                <Annotation Term="SAP__common.Label" String="Current Org Unit"/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/CurrOrgUnitName">
+                <Annotation Term="SAP__common.Label" String="Current Org Unit Name"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/OrgUnitManager">
+                <Annotation Term="SAP__common.Label" String="Org Unit Manager"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/OrgLevel01">
+                <Annotation Term="SAP__common.Label" String="Org Level - 01"/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/OrgLevel01Des">
+                <Annotation Term="SAP__common.Label" String="Org Level - 01 - Description"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/OrgLevel02">
+                <Annotation Term="SAP__common.Label" String="Org Level - 02"/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/OrgLevel02Des">
+                <Annotation Term="SAP__common.Label" String="Org Level - 02 - Description"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/OrgLevel03">
+                <Annotation Term="SAP__common.Label" String="Org Level - 03"/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/OrgLevel03Des">
+                <Annotation Term="SAP__common.Label" String="Org Level - 03 - Description"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/OrgLevel04">
+                <Annotation Term="SAP__common.Label" String="Org Level - 04"/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/OrgLevel04Des">
+                <Annotation Term="SAP__common.Label" String="Org Level - 04 - Description"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/OrgLevel05">
+                <Annotation Term="SAP__common.Label" String="Org Level - 05"/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/OrgLevel05Des">
+                <Annotation Term="SAP__common.Label" String="Org Level - 05 - Description"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/OrgLevel06">
+                <Annotation Term="SAP__common.Label" String="Org Level - 06"/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/OrgLevel06Des">
+                <Annotation Term="SAP__common.Label" String="Org Level - 06 - Description"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/OrgLevel07">
+                <Annotation Term="SAP__common.Label" String="Org Level - 07"/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/OrgLevel07Des">
+                <Annotation Term="SAP__common.Label" String="Org Level - 07 - Description"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/OrgLevel08">
+                <Annotation Term="SAP__common.Label" String="Org Level - 08"/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/OrgLevel08Des">
+                <Annotation Term="SAP__common.Label" String="Org Level - 08 - Description"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/OrgLevel09">
+                <Annotation Term="SAP__common.Label" String="Org Level - 09"/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/OrgLevel09Des">
+                <Annotation Term="SAP__common.Label" String="Org Level - 09 - Description"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/CreatedBy">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Created By"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Created By User"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=ABP_CREATION_USER"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType">
+                <Annotation Term="SAP__common.CreatedBy" Path="CreatedBy"/>
+                <Annotation Term="SAP__common.CreatedAt" Path="CreatedAt"/>
+                <Annotation Term="SAP__common.ChangedBy" Path="LastChangedBy"/>
+                <Annotation Term="SAP__common.ChangedAt" Path="LastChangedAt"/>
+                <Annotation Term="SAP__common.Label" String="Position"/>
+                <Annotation Term="SAP__common.SemanticKey">
+                    <Collection>
+                        <PropertyPath>Ebr</PropertyPath>
+                        <PropertyPath>PositionNumber</PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.SAPObjectNodeType">
+                    <Record>
+                        <PropertyValue Property="Name" String="ZSEC_A_POS"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__UI.Facets">
+                    <Collection>
+                        <Record Type="SAP__UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="General Information"/>
+                            <PropertyValue Property="ID" String="GeneralInfo"/>
+                            <PropertyValue Property="Target" AnnotationPath="@SAP__UI.Identification"/>
+                        </Record>
+                        <Record Type="SAP__UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Employee Information"/>
+                            <PropertyValue Property="ID" String="Employeeinfo"/>
+                            <PropertyValue Property="Target" AnnotationPath="@SAP__UI.Identification#Employeeinfo"/>
+                        </Record>
+                        <Record Type="SAP__UI.CollectionFacet">
+                            <PropertyValue Property="Label" String="Organization Information"/>
+                            <PropertyValue Property="ID" String="Organizationinfo"/>
+                            <PropertyValue Property="Facets">
+                                <Collection>
+                                    <Record Type="SAP__UI.CollectionFacet">
+                                        <PropertyValue Property="Label" String="Current Organization"/>
+                                        <PropertyValue Property="ID" String="OrganizationCurrent"/>
+                                        <PropertyValue Property="Facets">
+                                            <Collection>
+                                                <Record Type="SAP__UI.ReferenceFacet">
+                                                    <PropertyValue Property="Target" AnnotationPath="@SAP__UI.FieldGroup#OrganMy"/>
+                                                </Record>
+                                            </Collection>
+                                        </PropertyValue>
+                                    </Record>
+                                    <Record Type="SAP__UI.CollectionFacet">
+                                        <PropertyValue Property="Label" String="Organization Level"/>
+                                        <PropertyValue Property="ID" String="OrganizationOther"/>
+                                        <PropertyValue Property="Facets">
+                                            <Collection>
+                                                <Record Type="SAP__UI.ReferenceFacet">
+                                                    <PropertyValue Property="Target" AnnotationPath="@SAP__UI.FieldGroup#OrganOther"/>
+                                                </Record>
+                                            </Collection>
+                                        </PropertyValue>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.FieldGroup" Qualifier="OrganMy">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Current Org Unit"/>
+                                    <PropertyValue Property="Value" Path="CurrOrgUnit"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Current Org Unit Name"/>
+                                    <PropertyValue Property="Value" Path="CurrOrgUnitName"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Org Unit Manager"/>
+                                    <PropertyValue Property="Value" Path="OrgUnitManager"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__UI.FieldGroup" Qualifier="OrganOther">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Org Level - 01"/>
+                                    <PropertyValue Property="Value" Path="OrgLevel01"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Org Level - 01 - Description"/>
+                                    <PropertyValue Property="Value" Path="OrgLevel01Des"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Org Level - 02"/>
+                                    <PropertyValue Property="Value" Path="OrgLevel02"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Org Level - 02 - Description"/>
+                                    <PropertyValue Property="Value" Path="OrgLevel02Des"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Org Level - 03"/>
+                                    <PropertyValue Property="Value" Path="OrgLevel03"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Org Level - 03 - Description"/>
+                                    <PropertyValue Property="Value" Path="OrgLevel03Des"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Org Level - 04"/>
+                                    <PropertyValue Property="Value" Path="OrgLevel04"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Org Level - 04 - Description"/>
+                                    <PropertyValue Property="Value" Path="OrgLevel04Des"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Org Level - 05"/>
+                                    <PropertyValue Property="Value" Path="OrgLevel05"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Org Level - 05 - Description"/>
+                                    <PropertyValue Property="Value" Path="OrgLevel05Des"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Org Level - 06"/>
+                                    <PropertyValue Property="Value" Path="OrgLevel06"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Org Level - 06 - Description"/>
+                                    <PropertyValue Property="Value" Path="OrgLevel06Des"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Org Level - 07"/>
+                                    <PropertyValue Property="Value" Path="OrgLevel07"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Org Level - 07 - Description"/>
+                                    <PropertyValue Property="Value" Path="OrgLevel07Des"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Org Level - 08"/>
+                                    <PropertyValue Property="Value" Path="OrgLevel08"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Org Level - 08 - Description"/>
+                                    <PropertyValue Property="Value" Path="OrgLevel08Des"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Org Level - 09"/>
+                                    <PropertyValue Property="Value" Path="OrgLevel09"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Org Level - 09 - Description"/>
+                                    <PropertyValue Property="Value" Path="OrgLevel09Des"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Position"/>
+                        <PropertyValue Property="TypeNamePlural" String="Position"/>
+                        <PropertyValue Property="TypeImageUrl" String="sap-icon://hr-approval"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="SAP__UI.DataField">
+                                <PropertyValue Property="Value" Path="PositionDesc"/>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="Description">
+                            <Record Type="SAP__UI.DataField">
+                                <PropertyValue Property="Value" Path="PositionNumber"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__UI.Identification">
+                    <Collection>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Position Number"/>
+                            <PropertyValue Property="Value" Path="PositionNumber"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Position Description"/>
+                            <PropertyValue Property="Value" Path="PositionDesc"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Company Code"/>
+                            <PropertyValue Property="Value" Path="CompanyCode"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Company Name"/>
+                            <PropertyValue Property="Value" Path="CompanyName"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="EBR"/>
+                            <PropertyValue Property="Value" Path="Ebr"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.Identification" Qualifier="Employeeinfo">
+                    <Collection>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Sub - Pernr"/>
+                            <PropertyValue Property="Value" Path="SubPernr"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Sub - Employee Name"/>
+                            <PropertyValue Property="Value" Path="SubEmployeeName"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Sub on TAA"/>
+                            <PropertyValue Property="Value" Path="SubOnTaa"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Email Address"/>
+                            <PropertyValue Property="Value" Path="EmailAddress"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Manager name (Sub Only)"/>
+                            <PropertyValue Property="Value" Path="ManagerName"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="HDA - Pernr"/>
+                            <PropertyValue Property="Value" Path="HdaPernr"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="HDA - Employee name"/>
+                            <PropertyValue Property="Value" Path="HdaEmployeeName"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="TAA - Start Date"/>
+                            <PropertyValue Property="Value" Path="TaaStartDate"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="TAA - End Date"/>
+                            <PropertyValue Property="Value" Path="TaaEndDate"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Is Chief"/>
+                            <PropertyValue Property="Value" Path="IsChief"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.LineItem">
+                    <Collection>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Position Number"/>
+                            <PropertyValue Property="Value" Path="PositionNumber"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Position Description"/>
+                            <PropertyValue Property="Value" Path="PositionDesc"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Company Code"/>
+                            <PropertyValue Property="Value" Path="CompanyCode"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Company Name"/>
+                            <PropertyValue Property="Value" Path="CompanyName"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="EBR"/>
+                            <PropertyValue Property="Value" Path="Ebr"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Sub - Pernr"/>
+                            <PropertyValue Property="Value" Path="SubPernr"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Sub - Employee Name"/>
+                            <PropertyValue Property="Value" Path="SubEmployeeName"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Sub on TAA"/>
+                            <PropertyValue Property="Value" Path="SubOnTaa"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Email Address"/>
+                            <PropertyValue Property="Value" Path="EmailAddress"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Manager name (Sub Only)"/>
+                            <PropertyValue Property="Value" Path="ManagerName"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="HDA - Pernr"/>
+                            <PropertyValue Property="Value" Path="HdaPernr"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="HDA - Employee name"/>
+                            <PropertyValue Property="Value" Path="HdaEmployeeName"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="TAA - Start Date"/>
+                            <PropertyValue Property="Value" Path="TaaStartDate"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="TAA - End Date"/>
+                            <PropertyValue Property="Value" Path="TaaEndDate"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Is Chief"/>
+                            <PropertyValue Property="Value" Path="IsChief"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Current Org Unit"/>
+                            <PropertyValue Property="Value" Path="CurrOrgUnit"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Current Org Unit Name"/>
+                            <PropertyValue Property="Value" Path="CurrOrgUnitName"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Org Unit Manager"/>
+                            <PropertyValue Property="Value" Path="OrgUnitManager"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Org Level - 01"/>
+                            <PropertyValue Property="Value" Path="OrgLevel01"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Org Level - 01 - Description"/>
+                            <PropertyValue Property="Value" Path="OrgLevel01Des"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Org Level - 02"/>
+                            <PropertyValue Property="Value" Path="OrgLevel02"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Org Level - 02 - Description"/>
+                            <PropertyValue Property="Value" Path="OrgLevel02Des"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Org Level - 03"/>
+                            <PropertyValue Property="Value" Path="OrgLevel03"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Org Level - 03 - Description"/>
+                            <PropertyValue Property="Value" Path="OrgLevel03Des"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Org Level - 04"/>
+                            <PropertyValue Property="Value" Path="OrgLevel04"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Org Level - 04 - Description"/>
+                            <PropertyValue Property="Value" Path="OrgLevel04Des"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Org Level - 05"/>
+                            <PropertyValue Property="Value" Path="OrgLevel05"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Org Level - 05 - Description"/>
+                            <PropertyValue Property="Value" Path="OrgLevel05Des"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Org Level - 06"/>
+                            <PropertyValue Property="Value" Path="OrgLevel06"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Org Level - 06 - Description"/>
+                            <PropertyValue Property="Value" Path="OrgLevel06Des"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Org Level - 07"/>
+                            <PropertyValue Property="Value" Path="OrgLevel07"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Org Level - 07 - Description"/>
+                            <PropertyValue Property="Value" Path="OrgLevel07Des"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Org Level - 08"/>
+                            <PropertyValue Property="Value" Path="OrgLevel08"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Org Level - 08 - Description"/>
+                            <PropertyValue Property="Value" Path="OrgLevel08Des"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Org Level - 09"/>
+                            <PropertyValue Property="Value" Path="OrgLevel09"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Org Level - 09 - Description"/>
+                            <PropertyValue Property="Value" Path="OrgLevel09Des"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>PositionNumber</PropertyPath>
+                        <PropertyPath>PositionDesc</PropertyPath>
+                        <PropertyPath>CompanyCode</PropertyPath>
+                        <PropertyPath>CompanyName</PropertyPath>
+                        <PropertyPath>Ebr</PropertyPath>
+                        <PropertyPath>SubPernr</PropertyPath>
+                        <PropertyPath>SubEmployeeName</PropertyPath>
+                        <PropertyPath>SubOnTaa</PropertyPath>
+                        <PropertyPath>EmailAddress</PropertyPath>
+                        <PropertyPath>ManagerName</PropertyPath>
+                        <PropertyPath>HdaPernr</PropertyPath>
+                        <PropertyPath>HdaEmployeeName</PropertyPath>
+                        <PropertyPath>TaaStartDate</PropertyPath>
+                        <PropertyPath>TaaEndDate</PropertyPath>
+                        <PropertyPath>IsChief</PropertyPath>
+                        <PropertyPath>CurrOrgUnit</PropertyPath>
+                        <PropertyPath>CurrOrgUnitName</PropertyPath>
+                        <PropertyPath>OrgUnitManager</PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="Communication.Contact">
+                    <Record>
+                        <PropertyValue Property="email">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="address" Path="EmailAddress"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.Messages" Path="SAP__Messages"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/CreatedAt">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.Label" String="Created On"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Creation Date Time"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=ABP_CREATION_TSTMPL"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/LastChangedBy">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Changed By"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Last Changed By User"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=ABP_LASTCHANGE_USER"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/LastChangedAt">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.Label" String="Changed On"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Last Change Date Time"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=ABP_LASTCHANGE_TSTMPL"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/LocalLastChangedAt">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.Label" String="Changed On"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Local Instance Last Change Date Time"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=ABP_LOCINST_LASTCHANGE_TSTMPL"/>
+            </Annotations>
+            <Annotations Target="SAP__self.PositionDataType/__EntityControl">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__UI.HiddenFilter"/>
+                <Annotation Term="SAP__UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/PositionData">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="true"/>
+                        <PropertyValue Property="UnsupportedExpressions" EnumMember="SAP__capabilities.SearchExpressions/AND SAP__capabilities.SearchExpressions/NOT SAP__capabilities.SearchExpressions/group "/>
+                        <PropertyValue Property="SearchSyntax" String="https://url.sap/odata-search"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonFilterableProperties">
+                            <Collection>
+                                <PropertyPath>__EntityControl</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.SortRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonSortableProperties">
+                            <Collection>
+                                <PropertyPath>__EntityControl</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="RequiredProperties">
+                            <Collection>
+                                <PropertyPath>PositionNumber</PropertyPath>
+                                <PropertyPath>Ebr</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="DeltaUpdateSupported" Bool="true"/>
+                        <PropertyValue Property="Updatable" Path="__EntityControl/Updatable"/>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.DeepUpdateSupport">
+                    <Record>
+                        <PropertyValue Property="ContentIDSupported" Bool="true"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Path="__EntityControl/Deletable"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection>
+                        <PropertyPath>LocalLastChangedAt</PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.CreateHidden"/>
+                <Annotation Term="SAP__UI.DeleteHidden"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container">
+                <Annotation Term="SAP__common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+                <Annotation Term="SAP__UI.LeadingEntitySet" String="PositionData"/>
+                <Annotation Term="SAP__capabilities.FilterFunctions">
+                    <Collection>
+                        <String>eq</String>
+                        <String>ne</String>
+                        <String>gt</String>
+                        <String>ge</String>
+                        <String>lt</String>
+                        <String>le</String>
+                        <String>and</String>
+                        <String>or</String>
+                        <String>contains</String>
+                        <String>startswith</String>
+                        <String>endswith</String>
+                        <String>any</String>
+                        <String>all</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__support.TechnicalInfoLinks">
+                    <Record>
+                        <PropertyValue Property="Url" String="../../../../default/iwbep/common/0001/$metadata"/>
+                        <PropertyValue Property="FunctionImport" String="GetTechnicalInfoLinks"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.SupportedFormats">
+                    <Collection>
+                        <String>application/json</String>
+                        <String>application/pdf</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__PDF.Features">
+                    <Record>
+                        <PropertyValue Property="DocumentDescriptionReference" String="../../../../default/iwbep/common/0001/$metadata"/>
+                        <PropertyValue Property="DocumentDescriptionCollection" String="MyDocumentDescriptions"/>
+                        <PropertyValue Property="ArchiveFormat" Bool="true"/>
+                        <PropertyValue Property="Border" Bool="true"/>
+                        <PropertyValue Property="CoverPage" Bool="true"/>
+                        <PropertyValue Property="FitToPage" Bool="true"/>
+                        <PropertyValue Property="FontName" Bool="true"/>
+                        <PropertyValue Property="FontSize" Bool="true"/>
+                        <PropertyValue Property="HeaderFooter" Bool="true"/>
+                        <PropertyValue Property="IANATimezoneFormat" Bool="true"/>
+                        <PropertyValue Property="Margin" Bool="true"/>
+                        <PropertyValue Property="Padding" Bool="true"/>
+                        <PropertyValue Property="ResultSizeDefault" Int="20000"/>
+                        <PropertyValue Property="ResultSizeMaximum" Int="20000"/>
+                        <PropertyValue Property="Signature" Bool="true"/>
+                        <PropertyValue Property="TextDirectionLayout" Bool="true"/>
+                        <PropertyValue Property="Treeview" Bool="true"/>
+                        <PropertyValue Property="UploadToFileShare" Bool="true"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.KeyAsSegmentSupported"/>
+                <Annotation Term="SAP__capabilities.AsynchronousRequestsSupported"/>
+            </Annotations>
+            <Annotations Target="SAP__self.EntityControl/Deletable">
+                <Annotation Term="SAP__common.Label" String="Dyn. Method Control"/>
+                <Annotation Term="SAP__common.Heading" String="Dynamic Method Control"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Dynamic Method Property"/>
+            </Annotations>
+            <Annotations Target="SAP__self.EntityControl/Updatable">
+                <Annotation Term="SAP__common.Label" String="Dyn. Method Control"/>
+                <Annotation Term="SAP__common.Heading" String="Dynamic Method Control"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Dynamic Method Property"/>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
